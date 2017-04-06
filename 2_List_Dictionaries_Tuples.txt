@@ -1,0 +1,172 @@
+List
+Array in other languages
+Uses indexes to refer to elements in the list
+
+>>> []   ---> Empty list
+[]
+
+>>> ['some string',]
+['some string']
+
+>>> ['some string',123,"another one"]
+['some string', 123, 'another one']
+
+>>> list_var = ['some string',123,"another one"]
+>>> list_var.append("some other item")
+>>> list_var
+['some string', 123, 'another one', 'some other item']
+>>> list_var.pop()
+'some other item'
+>>> list_var
+['some string', 123, 'another one']
+
+>>> len(list_var)
+3
+>>> len("a string")
+8
+
+>>> list_var[0]
+'some string'
+>>> list_var[1]
+123
+>>> list_var[2]
+'another one'
+>>> list_var[3]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>>
+
+>>> name_list = ["Justin", "Matt", "John"]
+>>> matt_name = name_list[1]
+>>> matt_name
+'Matt'
+>>>
+
+>>> the_list = [1,2,3]
+>>> the_list.pop(0)
+1
+>>> the_list.pop(0)
+2
+>>> the_list.pop(0)
+3
+>>> the_list.pop(0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: pop from empty list
+>>>
+
+>>> the_list = [1,2,3]
+>>> the_list.pop(2)
+3
+>>> the_list.pop(2)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: pop index out of range
+>>> the_list
+[1, 2]
+>>> len(the_list)
+2
+>>>
+
+Dictionary
+Key value pairs
+Uses keys to reference the values in the dictionary
+
+>>> a_dict = {}
+>>> a_dict
+{}
+>>> {
+... "abc":"A string"
+... }
+{'abc': 'A string'}
+>>> {
+... "abc":"A string",
+... "def":"Other string",
+... "xyz":"Yet another"
+... }
+{'xyz': 'Yet another', 'abc': 'A string', 'def': 'Other string'}
+>>>
+
+>>> a_dict["abc"] = "new string replaced"
+>>> a_dict
+{'abc': 'new string replaced'}
+>>>
+>>> a_dict["abc"] = "a dict"
+>>> a_dict
+{'abc': 'a dict'}
+>>>
+
+>>> new_abc = {'1':'one', '2':'two', '3':'three'}
+>>> new_abc
+{'1': 'one', '3': 'three', '2': 'two'}
+>>> new_abc['1']
+'one'
+>>> new_abc['2']
+'two'
+>>>
+
+
+List vs Dictionary
+Index error vs Key error
+>>> list = [1,2,3,4]
+>>> list[100]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>>
+
+>>> dictionary = {'1':'one', '2':'two', '3':'three'}
+>>> dictionary[0]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+KeyError: 0
+>>>
+
+List inside a Dictionary
+>>> new_abc = {'1':'one', '2':'two', '3':'three'}
+>>> new_abc['4'] = list
+>>> new_abc
+{'1': 'one', '3': 'three', '2': 'two', '4': [1, 2, 3, 4]}
+>>>
+
+Dictionary inside a Dictionary
+>>> new_abc['5'] = new_abc
+>>> new_abc
+{'1': 'one', '3': 'three', '2': 'two', '5': {...}, '4': [1, 2, 3, 4]}
+>>> new_abc['5']
+{'1': 'one', '3': 'three', '2': 'two', '5': {...}, '4': [1, 2, 3, 4]}
+>>>
+
+Lists can hold a Dictionary
+Dictionary can hold a List
+
+Tuples
+A tuple is a sequence of immutable Python objects. Tuples are sequences, just like lists.
+The differences between tuples and lists are, the tuples cannot be changed unlike lists and tuples use parentheses, whereas lists use square brackets.
+>>> tup = ()
+>>> tup = ("abc", "abc")
+>>> tup
+('abc', 'abc')
+>>> tup = (
+... ("one", "two"),
+... ("three", "more"),
+... )
+>>> tup
+(('one', 'two'), ('three', 'more'))
+>>> tup[0]
+('one', 'two')
+>>> tup[0][0]
+'one'
+>>> tup += ("yetanother", 123)
+>>> tup
+(('one', 'two'), ('three', 'more'), 'yetanother', 123)
+>>> tup += (("yetanother", 123),)
+>>> tup
+(('one', 'two'), ('three', 'more'), 'yetanother', 123, ('yetanother', 123))
+>>> the_list = []
+>>> abc = ["another", "another"]
+>>> the_list.append(abc)
+>>> the_list
+[['another', 'another']]
+>>>
