@@ -1,2 +1,2 @@
 # Python-Tricks
-Python Tricks
+Python Basics and Tricks
