@@ -1,0 +1,46 @@
+For Loop
+In Python2
+➜  ~ python
+>>> list_bag = [10,11,12,13,14,15,17]
+>>> len(list_bag)
+7
+>>> for item in list_bag:
+...     print item
+...
+10
+11
+12
+13
+14
+15
+17
+>>> i = 0
+>>> for item in list_bag:
+...     i = i + 1
+...     print i
+...
+1
+2
+3
+4
+5
+6
+7
+>>>
+
+In Python3
+➜  ~ python3
+>>> list_bag = [10,11,12,13,14,15,17]
+>>> len(list_bag)
+7
+>>> for item in list_bag:
+...     print(item)
+...
+10
+11
+12
+13
+14
+15
+17
+>>>
