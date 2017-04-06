@@ -50,3 +50,23 @@ In Python3
 15
 17
 >>>
+
+
+While Loop
+>>> i = 0
+>>> while i < 11:
+...     print "YUP"
+...     i = i + 1
+...
+YUP
+YUP
+YUP
+YUP
+YUP
+YUP
+YUP
+YUP
+YUP
+YUP
+YUP
+>>>
