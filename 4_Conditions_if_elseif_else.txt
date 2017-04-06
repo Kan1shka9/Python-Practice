@@ -174,3 +174,19 @@ String
 Another
 568
 >>>
+
+>>> x = 0
+>>> list_e = []
+>>> list_d = ["James", "Test", "String", 123, "Another", "568"]
+>>> for item in list_d:
+...     if isinstance(item, int):
+...             list_e.append(item)
+...             list_d.pop(x)
+...     x += 1
+...
+123
+>>> list_d
+['James', 'Test', 'String', 'Another', '568']
+>>> list_e
+[123]
+>>>
