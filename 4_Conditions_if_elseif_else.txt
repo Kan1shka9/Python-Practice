@@ -122,3 +122,55 @@ something different
 The number is 2
 3
 >>>
+
+>>> list_d = ["James", "Test", "String", 123, "Another", "568"]
+>>> list_e = []
+>>> for i in list_d:
+...     print(i)
+...
+James
+Test
+String
+123
+Another
+568
+>>> isinstance(3,int)
+True
+>>> isinstance(3.0,int)
+False
+>>> isinstance(James,int)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'James' is not defined
+>>> isinstance(James,str)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'James' is not defined
+>>> isinstance("James",str)
+True
+>>> for i in list_d:
+...     if isinstance(i,int):
+...             list_e.append(i)
+...
+>>> print(list_e)
+[123]
+>>> list_d
+['James', 'Test', 'String', 123, 'Another', '568']
+>>>
+
+>>> x = 0
+>>> list_d[x]
+'James'
+>>> list_d[x+1]
+'Test'
+>>> for item in list_d:
+...     print(list_d[x])
+...     x += 1
+...
+James
+Test
+String
+123
+Another
+568
+>>>
