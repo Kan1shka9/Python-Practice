@@ -27,6 +27,12 @@ In Python2
 6
 7
 >>>
+>>> for item in list_bag:
+...     if item == 14:
+...             print "YES"
+...
+YES
+>>>
 
 In Python3
 ➜  ~ python3
