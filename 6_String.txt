@@ -77,4 +77,112 @@ Statement capitalization
 ['this is a sample', ' statement with', ' a comma']
 >>>
 
-10.) 
+10.) len() to Count String Length
+>>> text = "We will find the length of the statement"
+>>> len(text)
+40
+>>>
+
+11.) replace
+>>> text = "Replace Example"
+>>> text.replace("Replace", "Replaced")
+'Replaced Example'
+>>>
+
+Substitution
+
+1.) Format with Keyword Arguments (Variables)
+>>> "My name is {name}".format(name="Kanishka")
+'My name is Kanishka'
+>>>
+>>> text = "this is one {var_1} \
+... and the other {a} {b} {c}.".format(var_1="variable", a="one", b="two", c="three")
+>>> print text
+this is one variable and the other one two three.
+>>>
+>>> text = """So {name} is
+... something you can {a}
+... guess {b}.""".format(name="kanishka",a="one",b="two")
+>>> print text
+So kanishka is
+something you can one
+guess two.
+>>>
+
+2.) Format with Arguments
+>>> text = "This is {0} string".format("argument based")
+>>> print text
+This is argument based string
+>>>
+>>> text = "This is another {0} one \
+... of those types {1} {2} {3}".format("0th", "1st", "2nd", "3rd")
+>>> print text
+This is another 0th one of those types 1st 2nd 3rd
+>>>
+>>> text = """ This is a pre {0}
+... formatted {1} {2}.""".format("-","statement",".")
+>>> print text
+ This is a pre -
+formatted statement ..
+>>>
+
+3.) %s String Substitution
+>>> text = "This is %s formatted string" %("replacement")
+>>> print text
+This is replacement formatted string
+>>>
+>>> text = "The %%s format string is not as %s, but still very %s." %("robust", "useful")
+>>> print text
+The %s format string is not as robust, but still very useful.
+>>>
+
+4.) %f Float Substitution
+>>> text = "0 decimal places: %.0f" %(20)
+>>> print text
+0 decimal places: 20
+>>> text = "2 decimal places: %.2f" %(20)
+>>> print text
+2 decimal places: 20.00
+>>> text = "10 decimal places: %.10f" %(20)
+>>> print text
+10 decimal places: 20.0000000000
+>>> text = "400 decimal places: %.400f" %(20)
+>>> print text
+400 decimal places: 20.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+>>>
+
+5.) Date Substitution
+https://docs.python.org/2/library/datetime.html#strftime-and-strptime-behavior
+>>> import datetime
+>>> today = datetime.date.today()
+>>> text = '{today.month}/{today.day}/{today.year}'.format(today=today)
+>>> print text
+4/7/2017
+>>>
+>>> text = today.strftime('%-m/%-d/%y')
+>>> print text
+4/7/17
+>>>
+>>> now = datetime.datetime.utcnow() #utc time
+>>> text = now.strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
+>>> print text
+2017-04-07 21:59:31.479
+>>>
+>>> now = datetime.datetime.now() #local time
+>>> date_text = now.strftime('%Y/%m/%d %H:%M:%S.%f') #[:-3]
+>>> text = "Time is: %s" %(date_text)
+>>> print text
+Time is: 2017/04/07 14:59:45.703152
+>>>
+>>> now = datetime.datetime.now()
+>>> date_text = now.strftime('%B %d, %Y %H:%M:%S.%f %p')
+>>> text = "Time is %s" %(date_text)
+>>> print text
+Time is April 07, 2017 15:00:02.141417 PM
+>>>
+>>> now = datetime.datetime.now()
+>>> date_text = now.strftime('%x')
+>>> text = "Time is %s" %(date_text)
+>>> print text
+Time is 04/07/17
+>>>

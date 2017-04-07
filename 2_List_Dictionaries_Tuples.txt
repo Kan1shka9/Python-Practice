@@ -136,6 +136,30 @@ Python3 Vs Python2
 33.166666666666664
 >>>
 
+>>> list_A = [1,2,3]
+>>> list_A[0]
+1
+>>> list_A[1]
+2
+>>> list_A[2]
+3
+>>>
+>>> "Kanishka"[0]
+'K'
+>>> "Kanishka"[1]
+'a'
+>>> "Kanishka"[7]
+'a'
+>>> "Kanishka"[5]
+'h'
+>>> "Kanishka"[-1]
+'a'
+>>> "Kanishka"[-2]
+'k'
+>>> "Kanishka"[-3]
+'h'
+>>>
+
 Dictionary
 Key value pairs
 Uses keys to reference the values in the dictionary
