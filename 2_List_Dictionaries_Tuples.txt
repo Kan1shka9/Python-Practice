@@ -69,6 +69,73 @@ IndexError: pop index out of range
 2
 >>>
 
+>>> item = ["Mic", "Phone", 323.14, 345.24, "Jane", "Cliff", 452.12]
+>>> item
+['Mic', 'Phone', 323.14, 345.24, 'Jane', 'Cliff', 452.12]
+>>> isinstance(123.23, float)
+True
+>>> item.sort()
+>>> item
+[323.14, 345.24, 452.12, 'Cliff', 'Jane', 'Mic', 'Phone']
+>>>
+
+>>> str_items = ["Abc", "JC", "CA", "AD", "BCD"]
+>>> str_items.sort()
+>>> str_items
+['AD', 'Abc', 'BCD', 'CA', 'JC']
+>>> str_items.sort(key=str.lower)
+>>> str_items
+['Abc', 'AD', 'BCD', 'CA', 'JC']
+>>> str_items.sort(key=str.lower, reverse=True)
+>>> str_items
+['JC', 'CA', 'BCD', 'AD', 'Abc']
+>>>
+
+>>> new_items = sorted(str_items)
+>>> new_items
+['AD', 'Abc', 'BCD', 'CA', 'JC']
+>>> str_items
+['JC', 'CA', 'BCD', 'AD', 'Abc']
+>>>
+
+>>> int_items =[123, 13.23, 786, 34, 234.345, 23]
+>>> int_items
+[123, 13.23, 786, 34, 234.345, 23]
+>>> int_items.sort()
+>>> int_items
+[13.23, 23, 34, 123, 234.345, 786]
+>>> int_items.sort(reverse=True)
+>>> int_items
+[786, 234.345, 123, 34, 23, 13.23]
+>>> new_items = sorted(int_items, reverse=True)
+>>> new_items
+[786, 234.345, 123, 34, 23, 13.23]
+>>> new_items = sorted(int_items, reverse=False)
+>>> new_items
+[13.23, 23, 34, 123, 234.345, 786]
+>>> sum(int_items)
+1213.575
+>>> len(int_items)
+6
+>>> total = sum(int_items)
+>>> average = total/len(int_items)
+>>> average
+202.26250000000002
+>>>
+
+Python3 Vs Python2
+➜  ~ python2
+>>> avg = 199/6
+>>> avg
+33
+>>>
+
+➜  ~ python3
+>>> avg = 199/6
+>>> avg
+33.166666666666664
+>>>
+
 Dictionary
 Key value pairs
 Uses keys to reference the values in the dictionary
