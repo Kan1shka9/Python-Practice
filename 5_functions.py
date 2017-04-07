@@ -39,3 +39,19 @@ def my_avg(my_num_list):
     return the_sum/(my_count(my_num_list)*1.0)
 
 print "Average: " + str(my_avg(items))
+
+# Sum, Count and Average
+def my_sum_and_count(my_num_list):
+    total = 0
+    count = 0
+    for i in my_num_list:
+        if isinstance(i, float) or isinstance(i, int):
+            total += i
+            count += 1
+    return total, count
+
+def my_avg(my_num_list):
+    the_sum, the_count = my_sum_and_count(my_num_list)
+    return the_sum/(the_count * 1.0)
+
+print "Average: " + str(my_avg(items))
