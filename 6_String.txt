@@ -1,0 +1,80 @@
+String
+>>> text = "Some text"
+>>> text
+'Some text'
+>>>
+
+Concatenation
+>>> text1 = "One "
+>>> text2 = "Two "
+>>> text3 = "is "
+>>> text4 = "three"
+>>> text1 + text2 + text3 + text4
+'One Two is three'
+>>>
+
+Formatting
+1.) \n: New Line
+>>> text = "this is a \n new line character."
+>>> print text
+this is a
+ new line character.
+>>>
+
+2.) \t: Tab
+>>> text = "this is a \t tab character."
+>>> text
+'this is a \t tab character.'
+>>> print text
+this is a 	 tab character.
+>>>
+
+3.) \': Escaped single quote
+>>> text = 'this is an \'  escape for single quotes'
+>>> print text
+this is an '  escape for single quotes
+>>>
+
+4.) \": Escaped double quote
+>>> text = "this is an \" escape for double quotes"
+>>> print text
+this is an " escape for double quotes
+>>>
+
+5.) \: Escaped line-break
+>>> text = "escape line \
+... breaks"
+>>> print text
+escape line breaks
+>>>
+
+6.) .lower(): Lowercase entire string
+>>> text = "CONVERT TO LOWER CASE"
+>>> text.lower()
+'convert to lower case'
+>>>
+
+7.) .upper(): Uppercase entire string
+>>> text = "convert to upper case"
+>>> text.upper()
+'CONVERT TO UPPER CASE'
+>>>
+
+8.) Statement capitalization
+>>> text = "statement capitalization"
+>>> mod_text = text[0].upper() + text[1:].lower()
+>>> print mod_text
+Statement capitalization
+>>>
+
+9.) .split() to Break up string
+>>> text = "this is a sample statement"
+>>> text.split()
+['this', 'is', 'a', 'sample', 'statement']
+>>>
+>>> text = "this is a sample, statement with, a comma"
+>>> text.split(",")
+['this is a sample', ' statement with', ' a comma']
+>>>
+
+10.) 
